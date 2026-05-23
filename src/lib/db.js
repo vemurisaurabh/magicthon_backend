@@ -12,8 +12,10 @@ if (!fs.existsSync(DATA_DIR)) {
 }
 
 function readDb() {
-  if (!fs.existsSync(DB_FILE)) return { memes: {}, reactions: {} }
-  return JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'))
+  if (!fs.existsSync(DB_FILE)) return { memes: {}, reactions: {}, drafts: {} }
+  const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'))
+  if (!data.drafts) data.drafts = {}
+  return data
 }
 
 function writeDb(db) {
@@ -60,4 +62,31 @@ export async function getReactions(memeId) {
     counts[r.emoji] = (counts[r.emoji] || 0) + 1
   }
   return counts
+}
+
+export async function saveDraft({ templateId, layers }) {
+  const db = readDb()
+  const id = crypto.randomUUID().slice(0, 8)
+  db.drafts[id] = {
+    id,
+    template_id: templateId,
+    layers: layers || [],
+    updated_at: new Date().toISOString(),
+  }
+  writeDb(db)
+  return id
+}
+
+export async function getLatestDraft() {
+  const db = readDb()
+  const entries = Object.values(db.drafts)
+  if (entries.length === 0) return null
+  entries.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+  return entries[0]
+}
+
+export async function deleteDraft(id) {
+  const db = readDb()
+  delete db.drafts[id]
+  writeDb(db)
 }

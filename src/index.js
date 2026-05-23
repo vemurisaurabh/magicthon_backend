@@ -5,6 +5,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { memeRouter } from './routes/meme.js'
 import { shareRouter } from './routes/share.js'
+import { draftRouter } from './routes/draft.js'
 import { errorHandler } from './middleware/errorHandler.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -25,6 +26,7 @@ app.get('/api/health', (_req, res) => {
 
 app.use('/api', memeRouter)
 app.use('/api', shareRouter)
+app.use('/api', draftRouter)
 
 app.use(errorHandler)
 

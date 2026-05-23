@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import multer from 'multer'
-import { analyzeMeme } from '../services/aiService.js'
+import { analyzeMeme, refineMeme } from '../services/aiService.js'
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } })
 
@@ -13,7 +13,58 @@ memeRouter.post('/analyze', upload.single('image'), async (req, res, next) => {
       err.status = 400
       throw err
     }
-    const suggestions = await analyzeMeme(req.file.buffer, req.file.mimetype)
+
+    const prompt = req.body.prompt || undefined
+    let preferredTemplates
+    try {
+      preferredTemplates = req.body.preferredTemplates
+        ? JSON.parse(req.body.preferredTemplates)
+        : undefined
+    } catch {
+      preferredTemplates = undefined
+    }
+
+    const suggestions = await analyzeMeme(
+      req.file.buffer,
+      req.file.mimetype,
+      { prompt, preferredTemplates }
+    )
+    res.json({ suggestions })
+  } catch (err) {
+    next(err)
+  }
+})
+
+memeRouter.post('/refine', upload.single('image'), async (req, res, next) => {
+  try {
+    if (!req.file) {
+      const err = new Error('No image file provided')
+      err.status = 400
+      throw err
+    }
+
+    const feedback = req.body.feedback
+    if (!feedback) {
+      const err = new Error('Feedback is required')
+      err.status = 400
+      throw err
+    }
+
+    let previousSuggestions
+    try {
+      previousSuggestions = JSON.parse(req.body.previousSuggestions)
+    } catch {
+      const err = new Error('Invalid previousSuggestions')
+      err.status = 400
+      throw err
+    }
+
+    const suggestions = await refineMeme(
+      req.file.buffer,
+      req.file.mimetype,
+      previousSuggestions,
+      feedback
+    )
     res.json({ suggestions })
   } catch (err) {
     next(err)

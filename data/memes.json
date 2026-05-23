@@ -36,6 +36,103 @@
         "bottom": "Front row at Comic-Con"
       },
       "created_at": "2026-05-23T07:16:27.701Z"
+    },
+    "c254c270": {
+      "id": "c254c270",
+      "image_url": "http://localhost:3001/uploads/50730f62-be13-4e38-9571-e06e98bf6cfd.png",
+      "template_id": "woman-yelling-at-cat",
+      "texts": {
+        "top": "Friends demanding fashion sense",
+        "bottom": "\"At least my headphones match! mmmmmm\""
+      },
+      "created_at": "2026-05-23T08:15:20.095Z"
+    },
+    "2db10578": {
+      "id": "2db10578",
+      "image_url": "http://localhost:3001/uploads/87f566a3-d407-4546-960b-6550e5fea5d2.png",
+      "template_id": "distracted-boyfriend",
+      "texts": {
+        "top": "Technology advances",
+        "bottom": "Traditional values"
+      },
+      "created_at": "2026-05-23T08:58:44.652Z"
+    },
+    "7061d5f8": {
+      "id": "7061d5f8",
+      "image_url": "http://localhost:3001/uploads/92db0c7f-f47e-46e5-ba6b-5d02c20dab46.png",
+      "template_id": "distracted-boyfriend",
+      "texts": {
+        "top": "Save",
+        "bottom": "Traditional values"
+      },
+      "created_at": "2026-05-23T08:59:41.929Z"
+    },
+    "0bad6bc6": {
+      "id": "0bad6bc6",
+      "image_url": "http://localhost:3001/uploads/26a964e5-2b27-4df9-8f06-50f6633719c1.png",
+      "template_id": "distracted-boyfriend",
+      "texts": {
+        "top": "Save",
+        "bottom": "Traditional values"
+      },
+      "created_at": "2026-05-23T08:59:58.099Z"
+    },
+    "262ef7c7": {
+      "id": "262ef7c7",
+      "image_url": "http://localhost:3001/uploads/cb1033ae-a87d-4c03-825d-c818938803ce.png",
+      "template_id": "this-is-fine",
+      "texts": {
+        "top": "When you're ignoring life's problems",
+        "bottom": "Elephant-sized issues behind you"
+      },
+      "created_at": "2026-05-23T09:09:43.232Z"
+    },
+    "6b6b5cd6": {
+      "id": "6b6b5cd6",
+      "image_url": "http://localhost:3001/uploads/0b969dda-46fe-449c-8d4d-7a8337a1c01b.png",
+      "template_id": "two-buttons",
+      "texts": {
+        "top": "Notice the majestic elephant",
+        "bottom": "Perfect my selfie angle"
+      },
+      "created_at": "2026-05-23T09:09:55.625Z"
+    },
+    "a7f96672": {
+      "id": "a7f96672",
+      "image_url": "http://localhost:3001/uploads/f5219da7-624d-4c6a-b42a-2b4999120dbd.png",
+      "template_id": "distracted-boyfriend",
+      "texts": {
+        "top": "Save",
+        "bottom": "Traditional values"
+      },
+      "created_at": "2026-05-23T09:10:04.608Z"
+    },
+    "1cddc1c5": {
+      "id": "1cddc1c5",
+      "image_url": "http://localhost:3001/uploads/cd8779d7-4f7c-4ce5-a919-b22d32a2a400.png",
+      "template_id": "two-buttons",
+      "texts": {
+        "top": "Notice the majestic elephant",
+        "bottom": "Perfect my selfie angle"
+      },
+      "created_at": "2026-05-23T09:10:30.831Z"
+    },
+    "7a3e66aa": {
+      "id": "7a3e66aa",
+      "image_url": "http://localhost:3001/uploads/f8c50f46-6d1f-4b63-8c4d-3cd3e15a4bc3.png",
+      "template_id": "distracted-boyfriend",
+      "texts": {
+        "SScfI3sh": "Deadlines approach",
+        "9yIzf56O": "Procrastination vibes"
+      },
+      "created_at": "2026-05-23T09:18:36.227Z"
+    },
+    "3abc5399": {
+      "id": "3abc5399",
+      "image_url": "http://localhost:3001/uploads/3f23d461-d8e9-4154-bcfd-b2ee65da0234.png",
+      "template_id": "distracted-boyfriend",
+      "texts": {},
+      "created_at": "2026-05-23T09:25:03.273Z"
     }
   },
   "reactions": {
@@ -82,6 +179,396 @@
         "emoji": "💀",
         "created_at": "2026-05-23T06:19:29.282Z"
       }
+    ],
+    "c254c270": [
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T08:15:30.364Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T08:15:30.530Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T08:15:30.828Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T08:15:31.151Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T08:15:31.327Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T08:15:31.511Z"
+      }
+    ],
+    "1cddc1c5": [
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:19:37.260Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:19:37.381Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:19:37.579Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:19:37.747Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:19:38.070Z"
+      }
+    ],
+    "3abc5399": [
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T09:25:08.578Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T09:25:08.763Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T09:25:09.125Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T09:25:09.468Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T09:25:09.664Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T09:25:10.097Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:25:21.704Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:25:22.125Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T09:25:22.624Z"
+      }
     ]
+  },
+  "drafts": {
+    "ba7e3469": {
+      "id": "ba7e3469",
+      "template_id": "distracted-boyfriend",
+      "text_values": {
+        "top": "Technology advances",
+        "bottom": "Traditional values"
+      },
+      "zone_styles": {
+        "top": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4,
+          "x": null,
+          "y": null
+        },
+        "bottom": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4,
+          "x": null,
+          "y": null
+        }
+      },
+      "preview_data_url": null,
+      "updated_at": "2026-05-23T08:58:02.903Z"
+    },
+    "fc0ed145": {
+      "id": "fc0ed145",
+      "template_id": "distracted-boyfriend",
+      "text_values": {
+        "top": "Technology advances",
+        "bottom": "Traditional values"
+      },
+      "zone_styles": {
+        "top": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4,
+          "x": null,
+          "y": null
+        },
+        "bottom": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4,
+          "x": null,
+          "y": null
+        }
+      },
+      "preview_data_url": null,
+      "updated_at": "2026-05-23T08:58:09.311Z"
+    },
+    "1a4c19f3": {
+      "id": "1a4c19f3",
+      "template_id": "distracted-boyfriend",
+      "text_values": {
+        "top": "Technology advances",
+        "bottom": "Traditional values"
+      },
+      "zone_styles": {
+        "top": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4,
+          "x": null,
+          "y": null
+        },
+        "bottom": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 7,
+          "x": null,
+          "y": null
+        }
+      },
+      "preview_data_url": null,
+      "updated_at": "2026-05-23T08:58:40.603Z"
+    },
+    "9e3845c7": {
+      "id": "9e3845c7",
+      "template_id": "distracted-boyfriend",
+      "text_values": {
+        "top": "Save",
+        "bottom": "Traditional values"
+      },
+      "zone_styles": {
+        "top": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4,
+          "x": null,
+          "y": null
+        },
+        "bottom": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 7,
+          "x": null,
+          "y": null
+        }
+      },
+      "preview_data_url": null,
+      "updated_at": "2026-05-23T08:59:29.254Z"
+    },
+    "2109738a": {
+      "id": "2109738a",
+      "template_id": "distracted-boyfriend",
+      "text_values": {
+        "top": "Save",
+        "bottom": "Traditional values"
+      },
+      "zone_styles": {
+        "top": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4,
+          "x": null,
+          "y": null
+        },
+        "bottom": {
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 7,
+          "x": null,
+          "y": null
+        }
+      },
+      "preview_data_url": null,
+      "updated_at": "2026-05-23T08:59:55.023Z"
+    },
+    "e97abc6f": {
+      "id": "e97abc6f",
+      "template_id": "distracted-boyfriend",
+      "layers": [
+        {
+          "id": "BslL3KPB",
+          "text": "Deadlines",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "YKdCFw9q",
+          "text": "mmm",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T09:20:20.839Z"
+    },
+    "9e03e698": {
+      "id": "9e03e698",
+      "template_id": "distracted-boyfriend",
+      "layers": [
+        {
+          "id": "9C-edVLW",
+          "text": "Hair gel brands",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#FF4444",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "LWgNDxrA",
+          "text": "Windy weather",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T09:24:44.974Z"
+    },
+    "e66a8e21": {
+      "id": "e66a8e21",
+      "template_id": "distracted-boyfriend",
+      "layers": [
+        {
+          "id": "7radERe4",
+          "text": "Me after studying 8 hours",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 35,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "giXTYp4l",
+          "text": "My assignment due tomorrow",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T09:27:35.348Z"
+    },
+    "a859b6ed": {
+      "id": "a859b6ed",
+      "template_id": "two-buttons",
+      "layers": [
+        {
+          "id": "o0xJDkA9",
+          "text": "Going out on a Friday night",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "0dOx6wHC",
+          "text": "Netflix & Chill with snacks",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T09:41:36.966Z"
+    }
   }
 }
