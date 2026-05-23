@@ -154,6 +154,20 @@
       "template_id": "one-does-not-simply",
       "texts": {},
       "created_at": "2026-05-23T10:22:58.082Z"
+    },
+    "49d8a1ea": {
+      "id": "49d8a1ea",
+      "image_url": "http://localhost:3001/uploads/5e7f1aeb-2bd3-46e3-b3ab-9bdfc42f9199.png",
+      "template_id": "woman-yelling-at-cat",
+      "texts": {},
+      "created_at": "2026-05-23T10:49:52.340Z"
+    },
+    "1fd2f934": {
+      "id": "1fd2f934",
+      "image_url": "http://localhost:3001/uploads/492b44e7-b18c-42ea-b6d8-2ab9b9f2422b.png",
+      "template_id": "expanding-brain",
+      "texts": {},
+      "created_at": "2026-05-23T10:55:01.302Z"
     }
   },
   "reactions": {
@@ -431,6 +445,126 @@
       {
         "emoji": "😂",
         "created_at": "2026-05-23T10:23:46.393Z"
+      }
+    ],
+    "49d8a1ea": [
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:16.924Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:17.272Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:17.541Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:17.912Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:18.176Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:18.341Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:18.513Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:18.675Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:50:18.855Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:50:23.141Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:50:23.349Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:50:23.777Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:50:24.000Z"
+      }
+    ],
+    "1fd2f934": [
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T10:55:10.840Z"
+      },
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T10:55:11.027Z"
+      },
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T10:55:11.202Z"
+      },
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T10:55:11.381Z"
+      },
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T10:55:12.023Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:20.129Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:20.303Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:20.493Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:20.678Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:20.853Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:21.043Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:21.213Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:21.399Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:21.570Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:21.739Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T10:55:21.918Z"
       }
     ]
   },
@@ -835,6 +969,138 @@
         }
       ],
       "updated_at": "2026-05-23T10:22:55.569Z"
+    },
+    "3b70bb71": {
+      "id": "3b70bb71",
+      "template_id": "disaster-girl",
+      "layers": [
+        {
+          "id": "-_hXF01D",
+          "text": "Posing With A Living Meme",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "ZsOEighA",
+          "text": "Elephant's Revenge Incoming",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T10:34:36.428Z"
+    },
+    "fbb688d0": {
+      "id": "fbb688d0",
+      "template_id": "woman-yelling-at-cat",
+      "layers": [
+        {
+          "id": "VUn1qyzN",
+          "text": "Told barber: 'Give me an upgrade!'",
+          "x": -0.023333333333333334,
+          "y": 0.04666666666666667,
+          "fontSize": 29,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "CGPtVyJj",
+          "text": "Left with WiFi signal hair.",
+          "x": 0.03833333333333333,
+          "y": 0.875,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T10:49:33.609Z"
+    },
+    "73bd1f1a": {
+      "id": "73bd1f1a",
+      "template_id": "expanding-brain",
+      "layers": [
+        {
+          "id": "ekS_BP4E",
+          "text": "Wearing headphones: Normal listening",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "Ny7oCOT0",
+          "text": "Wearing them like a necklace: Advanced fashion statement",
+          "x": 0.015,
+          "y": 0.8683333333333333,
+          "fontSize": 29,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T10:54:50.302Z"
+    },
+    "fca29baf": {
+      "id": "fca29baf",
+      "template_id": "expanding-brain",
+      "layers": [
+        {
+          "id": "ekS_BP4E",
+          "text": "Wearing headphones: Normal listening",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "Ny7oCOT0",
+          "text": "Wearing them like a necklace: Advanced fashion statement",
+          "x": 0.015,
+          "y": 0.8683333333333333,
+          "fontSize": 29,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T10:54:53.997Z"
     }
   }
 }

@@ -46,6 +46,12 @@ shareRouter.post('/react/:id', async (req, res, next) => {
     }
     await addReaction(req.params.id, emoji)
     const counts = await getReactions(req.params.id)
+
+    const io = req.app.get('io')
+    if (io) {
+      io.to(`meme:${req.params.id}`).emit('reaction', { memeId: req.params.id, emoji, counts })
+    }
+
     res.json(counts)
   } catch (err) {
     next(err)
