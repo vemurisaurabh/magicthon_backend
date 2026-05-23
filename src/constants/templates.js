@@ -187,15 +187,15 @@ export const TEMPLATES = [
     overlayStyle: 'editorial',
   },
   {
-    id: 'bernie-mittens',
-    name: 'Bernie Mittens',
+    id: 'grandma-internet',
+    name: 'Grandma Finds the Internet',
     layout: 'single',
     photoPlacement: 'background',
     textZones: [
-      { id: 'top', label: 'Situation', defaultText: 'Everyone else vibing' },
-      { id: 'bottom', label: 'You', defaultText: 'Me, just sitting here' },
+      { id: 'top', label: 'Discovery', defaultText: 'Just found out about...' },
+      { id: 'bottom', label: 'Reaction', defaultText: 'This changes everything' },
     ],
-    overlayStyle: 'minimal',
+    overlayStyle: 'classic',
   },
   {
     id: 'success-kid',
@@ -209,15 +209,15 @@ export const TEMPLATES = [
     overlayStyle: 'classic',
   },
   {
-    id: 'trade-offer',
-    name: 'Trade Offer',
+    id: 'confession-bear',
+    name: 'Confession Bear',
     layout: 'single',
     photoPlacement: 'background',
     textZones: [
-      { id: 'top', label: 'I receive', defaultText: 'Your time and effort' },
-      { id: 'bottom', label: 'You receive', defaultText: 'Nothing in return' },
+      { id: 'top', label: 'Setup', defaultText: 'I have a confession...' },
+      { id: 'bottom', label: 'Confession', defaultText: 'I actually enjoy it' },
     ],
-    overlayStyle: 'editorial',
+    overlayStyle: 'classic',
   },
 ]
 

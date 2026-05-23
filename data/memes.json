@@ -168,6 +168,34 @@
       "template_id": "expanding-brain",
       "texts": {},
       "created_at": "2026-05-23T10:55:01.302Z"
+    },
+    "7218d32e": {
+      "id": "7218d32e",
+      "image_url": "http://localhost:3001/uploads/8bd3b030-47f2-41f5-95be-44016af83caf.png",
+      "template_id": "grandma-internet",
+      "texts": {},
+      "created_at": "2026-05-23T11:16:02.780Z"
+    },
+    "29c96ebc": {
+      "id": "29c96ebc",
+      "image_url": "http://localhost:3001/uploads/3a02de7a-2a88-4f56-a7bc-85bc65541477.png",
+      "template_id": "this-is-fine",
+      "texts": {},
+      "created_at": "2026-05-23T11:33:23.765Z"
+    },
+    "38ad3a38": {
+      "id": "38ad3a38",
+      "image_url": "http://localhost:3001/uploads/20d8f975-6ca3-43b9-b001-c662995cbae5.png",
+      "template_id": "left-exit-12",
+      "texts": {},
+      "created_at": "2026-05-23T11:36:19.639Z"
+    },
+    "1e57a110": {
+      "id": "1e57a110",
+      "image_url": "http://localhost:3001/uploads/68c4af7c-5717-426f-a885-a6877796e489.png",
+      "template_id": "batman-slapping-robin",
+      "texts": {},
+      "created_at": "2026-05-23T11:39:35.251Z"
     }
   },
   "reactions": {
@@ -565,6 +593,132 @@
       {
         "emoji": "💀",
         "created_at": "2026-05-23T10:55:21.918Z"
+      }
+    ],
+    "29c96ebc": [
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:33:32.930Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:33:33.425Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:33:34.020Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:33:34.611Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:33:34.903Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:33:38.561Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:33:38.819Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:33:39.031Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:33:39.499Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:33:40.012Z"
+      }
+    ],
+    "38ad3a38": [
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T11:36:30.700Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:36:31.799Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:36:32.576Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T11:36:33.426Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T11:36:34.172Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:36:42.698Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T11:36:45.496Z"
+      },
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T11:36:47.268Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T11:36:59.230Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:37:12.450Z"
+      }
+    ],
+    "1e57a110": [
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T11:41:45.516Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:41:47.011Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:41:48.228Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T11:41:49.497Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T11:42:02.822Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T11:42:04.327Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T11:42:05.445Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T11:42:06.547Z"
+      },
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T11:42:07.763Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T11:42:14.488Z"
       }
     ]
   },
@@ -1101,6 +1255,72 @@
         }
       ],
       "updated_at": "2026-05-23T10:54:53.997Z"
+    },
+    "9f9ed4b8": {
+      "id": "9f9ed4b8",
+      "template_id": "grandma-internet",
+      "layers": [
+        {
+          "id": "Ma1spbEJ",
+          "text": "When you try to take a selfie...",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 36,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "0iBq14-0",
+          "text": "Accidentally open the front camera at 3AM",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T11:15:58.823Z"
+    },
+    "67ee470e": {
+      "id": "67ee470e",
+      "template_id": "this-is-fine",
+      "layers": [
+        {
+          "id": "gkBJo1G8",
+          "text": "When the WiFi is down",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "Kyuv_zMR",
+          "text": "But you've ascended to eternal buffering",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T11:33:19.501Z"
     }
   }
 }
