@@ -1,0 +1,316 @@
+# ============================================================
+# MAGICTHON — .cursorrules
+# Meme generation app · React + Node.js · Build day rules
+# ============================================================
+
+## What We're Building
+A modern meme creation tool for Magicthon hackathon.
+Users upload a photo → AI analyzes it → suggests 6 meme formats →
+user edits on canvas → exports PNG → shares via unique link →
+anyone can react live, no signup needed.
+
+## Stack (Non-Negotiable)
+- Frontend  : React + JavaScript (no TypeScript), Vite
+- UI Library: PrimeReact — use its components as the base, override with CSS
+- Styling   : Native CSS files (one per component) + global CSS variables
+- Animation : Framer Motion for page transitions and micro-interactions
+- Canvas    : Konva.js + react-konva for the meme canvas editor
+- State     : Redux Toolkit — all async API calls via createAsyncThunk
+- Testing   : Playwright for end-to-end automation
+- Backend   : Node.js + Express
+- Database  : Supabase (Postgres + Realtime + Storage)
+- AI        : OpenAI GPT-4o (vision) via backend proxy
+- Deploy    : Vercel (frontend) + Railway or Render (backend)
+
+## Project Structure (Flat, Predictable — Do Not Deviate)
+frontend/
+  src/
+    components/         # UI components, one per file, <150 lines
+      ComponentName.jsx
+      ComponentName.css   ← paired CSS file, same name
+    pages/              # Route-level components
+      PageName.jsx
+      PageName.css
+    hooks/              # All data-fetching and stateful logic
+    services/           # API calls to backend (never call API from components)
+    lib/                # Konva helpers, template definitions, utils
+    constants/          # Template configs, color palettes, font list
+    store/              # Global state (Zustand)
+    styles/
+      globals.css         ← CSS custom properties (design tokens), resets
+      primereact-theme.css ← ALL PrimeReact overrides go here, nowhere else
+  public/
+backend/
+  src/
+    routes/             # Express route handlers (thin — logic in services)
+    services/           # Business logic (meme, ai, storage, reaction)
+    lib/                # Supabase client, OpenAI client
+    middleware/         # Error handler, rate limiter
+  index.js
+
+## CSS Architecture Rules (Critical — Read Before Writing Any CSS)
+
+### File Pairing Rule
+Every component gets its own CSS file with the same name.
+  UploadZone.jsx  →  UploadZone.css
+  MemeCard.jsx    →  MemeCard.css
+Import it at the top of the component: import './UploadZone.css'
+Never put one component's styles in another component's CSS file.
+
+### CSS Custom Properties (globals.css is the single source of truth)
+All design tokens are defined once in src/styles/globals.css as CSS variables.
+Reference them everywhere — never hardcode a color, spacing, or font value.
+Example: use var(--color-accent) not #f5e642 in any component CSS file.
+
+### Class Naming Convention — BEM-lite
+Use descriptive, component-scoped class names to avoid collisions:
+  .upload-zone { }              ← block
+  .upload-zone__droparea { }    ← element
+  .upload-zone__droparea--active { }  ← modifier
+Never use generic class names like .card, .button, .title alone.
+Always prefix with the component name: .meme-card__title, .editor-toolbar__btn.
+
+### PrimeReact Override Strategy
+PrimeReact components are the BASE — use them for structure and accessibility.
+Override their appearance in src/styles/primereact-theme.css ONLY.
+NEVER write PrimeReact overrides inside a component's own CSS file.
+Use PrimeReact's CSS variable system where possible:
+  :root { --p-button-background: var(--color-accent); }
+For surgical overrides use their generated class names:
+  .p-button.p-button-primary { background: var(--color-accent); }
+
+### Which PrimeReact Components to Use (and for What)
+- p-fileupload (headless mode)  → photo upload, we fully control the UI
+- p-button                      → all buttons (CTA, toolbar, reactions)
+- p-slider                      → font size control in canvas editor
+- p-dialog                      → share modal, webcam modal
+- p-toast                       → copy-to-clipboard feedback, error alerts
+- p-skeleton                    → loading placeholders on suggestion cards
+- p-progressbar                 → optional upload progress
+- p-tooltip                     → hover hints on toolbar buttons
+For anything else: build it as a plain React component with native CSS.
+Do NOT use PrimeReact for layout (no p-grid, p-flex) — use CSS Grid/Flexbox.
+
+### Spacing System (use these values only — define as CSS vars)
+--space-1: 4px
+--space-2: 8px
+--space-3: 12px
+--space-4: 16px
+--space-5: 24px
+--space-6: 32px
+--space-7: 48px
+--space-8: 64px
+
+### Responsive Breakpoints
+--bp-mobile:  375px
+--bp-tablet:  768px
+--bp-desktop: 1200px
+Mobile-first always: base styles are for 375px, media queries add desktop styles.
+  @media (min-width: 768px) { ... }   ← tablet and up
+  @media (min-width: 1200px) { ... }  ← desktop and up
+
+## Naming Conventions
+- Components    : PascalCase  (MemeCard.jsx, CanvasEditor.jsx)
+- CSS files     : PascalCase matching component (MemeCard.css)
+- CSS classes   : BEM-lite kebab-case (see above)
+- Hooks         : camelCase starting with "use" (useMemeSuggestions.js)
+- Services      : camelCase ending with "Service" (memeService.js)
+- API routes    : kebab-case  (/api/meme-suggestions, /api/share)
+- Constants     : SCREAMING_SNAKE_CASE for values, camelCase for objects
+- Files         : max 150 lines — split if longer
+
+## Architecture Rules
+1. Components only handle rendering and local UI state
+2. All async logic lives in custom hooks
+3. All API calls live in /services — never fetch() inside a component
+4. All business logic lives in backend /services — never in route handlers
+5. Templates are data (config objects in /constants/templates.js)
+   — never hardcoded layouts, never static images
+6. Supabase is only called from the backend — never from frontend directly
+7. OpenAI is only called from the backend — API key never touches frontend
+
+## The Template System (Critical — Read Before Building)
+Every meme template is a config object, not an image:
+{
+  id: "drake",
+  name: "Drake Approves",
+  layout: "split-vertical",
+  photoPlacement: "background" | "zone",
+  textZones: [
+    { id: "top", label: "Rejection", defaultText: "...", style: {...} },
+    { id: "bottom", label: "Approval", defaultText: "...", style: {...} }
+  ],
+  overlayStyle: "classic" | "minimal" | "editorial"
+}
+The LLM returns a template ID + text for each zone.
+The canvas renders it dynamically from the config.
+Never hard-code layout logic per template — it must be data-driven.
+
+## AI / Prompt Rules
+- The vision prompt MUST instruct the model to:
+  1. First describe the photo (expression, context, energy, setting)
+  2. Then pick a template ID from the provided list
+  3. Then write top text and bottom text specific to THIS photo
+  4. Return structured JSON only — no prose, no markdown fences
+- The backend validates the JSON shape before returning to frontend
+- Always include a fallback if the LLM returns malformed output
+
+## UI/UX Non-Negotiables (Priority 0)
+- Every interactive element needs hover + active + focus states (in CSS)
+- Every async operation needs a loading state — never freeze the UI
+- Loading states are creative moments (witty copy, p-skeleton cards)
+- Use Framer Motion for: page transitions, card reveals, button feedback
+- Mobile-first always — design for 375px, enhance for desktop
+- No hardcoded spacing — always use var(--space-N)
+- No placeholder copy anywhere — every label is intentional and witty
+- The upload zone, loading screen, and share page each get special care
+- Meme suggestions appear with a staggered animation (not all at once)
+- Canvas editor feels snappy — dragging text must never lag
+
+## Visual Identity (Define All of These in globals.css)
+Direction: Dark, punchy, editorial — like a creative tool, not a form.
+
+--color-bg:          #0a0a0a;   /* page background */
+--color-surface:     #141414;   /* panels, sidebars */
+--color-card:        #1c1c1c;   /* cards, modals */
+--color-border:      #2a2a2a;   /* all borders */
+--color-accent:      #f5e642;   /* electric yellow — use sparingly */
+--color-accent-dark: #c9ba1a;   /* accent hover state */
+--color-text-primary:   #f0f0f0;
+--color-text-secondary: #888888;
+--color-danger:      #ff4444;
+
+--font-display: 'Bebas Neue', sans-serif;   /* headlines, nav, labels */
+--font-body:    'DM Sans', sans-serif;      /* all UI text */
+--font-meme:    'Impact', 'Anton', sans-serif; /* inside the canvas only */
+
+--radius-sm:  4px;
+--radius-md:  8px;
+--radius-lg:  12px;
+--radius-pill: 999px;
+
+No box-shadow on dark surfaces — use border: 1px solid var(--color-border) instead.
+
+## State Management (Redux Toolkit)
+One store, slice-per-feature pattern. All API calls use createAsyncThunk.
+store/
+  index.js              ← configureStore, root reducer
+  uploadSlice.js        ← photo file, preview URL, upload status
+  suggestSlice.js       ← suggestions[], loading, error + analyzePhoto thunk
+  editorSlice.js        ← selected template, text values, canvas history (undo stack)
+  shareSlice.js         ← shareId, shareUrl, reactions + shareMeme / addReaction thunks
+
+Rules for every slice:
+- State shape is flat — no nested objects more than 1 level deep
+- Every createAsyncThunk has all 3 cases handled: pending, fulfilled, rejected
+- Loading state uses the string enum pattern: 'idle' | 'loading' | 'succeeded' | 'failed'
+- Error state is always a string (message only), never a raw Error object
+- Selectors are defined at the bottom of each slice file and exported
+- Components use useSelector with named selectors — never access store shape directly
+
+Example pattern (follow this in every slice):
+  export const analyzePhoto = createAsyncThunk(
+    'suggest/analyzePhoto',
+    async (file, { rejectWithValue }) => {
+      try {
+        return await memeService.analyzeMeme(file)
+      } catch (err) {
+        return rejectWithValue(err.message)
+      }
+    }
+  )
+  // In extraReducers:
+  .addCase(analyzePhoto.pending, (state) => {
+    state.status = 'loading'; state.error = null
+  })
+  .addCase(analyzePhoto.fulfilled, (state, action) => {
+    state.status = 'succeeded'; state.suggestions = action.payload
+  })
+  .addCase(analyzePhoto.rejected, (state, action) => {
+    state.status = 'failed'; state.error = action.payload
+  })
+
+## API Contract (Backend Endpoints)
+POST /api/analyze        — accepts image, returns 6 meme suggestions (JSON)
+POST /api/share          — saves meme to Supabase, returns shareId + URL
+GET  /api/share/:id      — returns meme data for the share page
+POST /api/react/:id      — adds a reaction (emoji + count)
+GET  /api/react/:id      — returns current reaction counts
+
+## Error Handling
+- Backend: all errors go through a central error middleware
+- Frontend: every hook catches errors and exposes an `error` state
+- Use PrimeReact's p-toast for all user-facing error messages
+- If the LLM fails: toast error + "Try again" button
+- If the LLM returns malformed JSON: retry once silently, then toast error
+- If Supabase is slow: show optimistic UI, sync in background
+- Never let the app crash silently — always surface something to the user
+
+## Code Quality Rules
+- No console.log in any committed code (use a debug flag if needed)
+- No hardcoded colors, spacing, or font values — always use CSS vars
+- No hardcoded API URLs — use environment variables only
+- No API keys anywhere in frontend code
+- Max file size: 150 lines — if longer, split into smaller modules
+- Every async function uses try/catch
+- Named exports everywhere (except page-level components)
+
+## Cursor-Specific Instructions
+- Always follow the pattern of the nearest existing similar component
+- When creating a new component, create its paired CSS file at the same time
+- New CSS variables go in globals.css first, then reference them
+- PrimeReact overrides go ONLY in primereact-theme.css, never elsewhere
+- When adding a new API call, add it to the relevant /services file — never inline
+- Do not modify files outside the scope of the current task
+- Do not add dependencies not in this rules file without asking
+- Keep Framer Motion variants defined at the top of each component file
+
+## Environment Variables
+Frontend (.env):
+  VITE_API_URL=http://localhost:3001
+
+Backend (.env):
+  OPENAI_API_KEY=
+  SUPABASE_URL=
+  SUPABASE_SERVICE_KEY=
+  PORT=3001
+  FRONTEND_URL=http://localhost:5173
+
+## Do NOT
+- Use TypeScript (this project is JavaScript only)
+- Use Zustand, MobX, or Context for global state — Redux Toolkit only
+- Use Tailwind CSS or styled-components
+- Write inline styles (style={{ }}) except for dynamic Konva/canvas values
+- Use PrimeReact for layout (no p-grid, p-flex) — use CSS Grid/Flexbox
+- Put PrimeReact overrides inside component CSS files — use primereact-theme.css
+- Hardcode any color, spacing, or font — use CSS variables from globals.css
+- Call Supabase or OpenAI from the frontend
+- Put logic inside route handlers
+- Create files longer than 150 lines
+- Use default exports except for page components
+- Add auth or login of any kind
+- Use static images as meme templates
+- Use raw canvas API — use Konva/react-konva
+- Skip loading states for any async operation
+- Use Inter, Roboto, or Arial anywhere in the UI
+
+
+## Additional support given by the hackathon team at 10:57 IST
+Open Router key.
+🚀 Hackathon Fuel Incoming
+You can use the API key below with OpenRouter if you want to integrate LLMs into your hack.
+Build anything you can imagine:
+Meme generators
+AI copilots
+Image generation tools
+Smart workflows
+Voice/chat apps
+Chaotic side quests that somehow become products 😄
+The goal is not just to “make something work”.
+We’re looking for:
+✨ Depth in thinking
+✨ Product intuition
+✨ Attention to experience
+✨ Something people genuinely enjoy using by the end of the day
+Make it fast. Make it polished. Make it memorable.
+Most importantly: have fun building 🚀

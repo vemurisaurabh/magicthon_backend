@@ -1,0 +1,77 @@
+{
+  "memes": {
+    "a4683d4d": {
+      "id": "a4683d4d",
+      "image_url": "http://localhost:3001/uploads/0b150f05-c31f-42b1-8153-60e9daa12afe.png",
+      "template_id": "drake",
+      "texts": {
+        "top": "Wearing a suit for a meeting",
+        "bottom": "Wearing it for the car ride"
+      },
+      "created_at": "2026-05-23T06:11:59.385Z"
+    },
+    "02d87871": {
+      "id": "02d87871",
+      "image_url": "http://localhost:3001/uploads/071a4083-3d20-4902-b347-8e4ce11fce27.png",
+      "template_id": "unknown",
+      "texts": {},
+      "created_at": "2026-05-23T06:19:20.788Z"
+    },
+    "b3975277": {
+      "id": "b3975277",
+      "image_url": "http://localhost:3001/uploads/eac30d36-45e4-418b-851f-ee42c321db74.png",
+      "template_id": "distracted-boyfriend",
+      "texts": {
+        "top": "Goals for 2023",
+        "bottom": "Front row at Comic-Con"
+      },
+      "created_at": "2026-05-23T06:36:44.637Z"
+    }
+  },
+  "reactions": {
+    "a4683d4d": [
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T06:12:08.440Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T06:12:09.280Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T06:12:10.038Z"
+      },
+      {
+        "emoji": "🤌",
+        "created_at": "2026-05-23T06:12:10.751Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T06:12:11.622Z"
+      }
+    ],
+    "02d87871": [
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T06:19:28.535Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T06:19:28.710Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T06:19:28.878Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T06:19:29.103Z"
+      },
+      {
+        "emoji": "💀",
+        "created_at": "2026-05-23T06:19:29.282Z"
+      }
+    ]
+  }
+}
