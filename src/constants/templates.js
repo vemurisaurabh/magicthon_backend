@@ -33,15 +33,15 @@ export const TEMPLATES = [
     overlayStyle: 'classic',
   },
   {
-    id: 'this-is-fine',
-    name: 'This Is Fine',
+    id: 'your-face-when',
+    name: 'Your Face When',
     layout: 'single',
     photoPlacement: 'background',
     textZones: [
-      { id: 'top', label: 'Situation', defaultText: 'Everything is on fire' },
-      { id: 'bottom', label: 'Reaction', defaultText: 'This is fine.' },
+      { id: 'top', label: 'Situation', defaultText: 'Your face when' },
+      { id: 'bottom', label: 'Punchline', defaultText: 'The meeting could have been an email' },
     ],
-    overlayStyle: 'minimal',
+    overlayStyle: 'classic',
   },
   {
     id: 'woman-yelling-at-cat',
@@ -132,15 +132,15 @@ export const TEMPLATES = [
     overlayStyle: 'classic',
   },
   {
-    id: 'surprised-pikachu',
-    name: 'Surprised Pikachu',
+    id: 'blue-pill-red-pill',
+    name: 'Blue Pill Red Pill',
     layout: 'single',
     photoPlacement: 'background',
     textZones: [
-      { id: 'top', label: 'Obvious action', defaultText: 'Does the obvious thing' },
-      { id: 'bottom', label: 'Shock', defaultText: '*surprised pikachu face*' },
+      { id: 'top', label: 'Blue pill', defaultText: 'Stay comfortable' },
+      { id: 'bottom', label: 'Red pill', defaultText: 'Face the harsh truth' },
     ],
-    overlayStyle: 'classic',
+    overlayStyle: 'editorial',
   },
   {
     id: 'is-this-a-pigeon',
@@ -209,15 +209,15 @@ export const TEMPLATES = [
     overlayStyle: 'classic',
   },
   {
-    id: 'confession-bear',
-    name: 'Confession Bear',
+    id: 'pov-first-day-office',
+    name: 'POV: First Day in Office',
     layout: 'single',
     photoPlacement: 'background',
     textZones: [
-      { id: 'top', label: 'Setup', defaultText: 'I have a confession...' },
-      { id: 'bottom', label: 'Confession', defaultText: 'I actually enjoy it' },
+      { id: 'top', label: 'POV setup', defaultText: 'POV: First day in office' },
+      { id: 'bottom', label: 'Reality', defaultText: 'Already planning my resignation' },
     ],
-    overlayStyle: 'classic',
+    overlayStyle: 'editorial',
   },
 ]
 

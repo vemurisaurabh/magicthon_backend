@@ -182,3 +182,140 @@ No markdown fences. No explanations outside JSON.`
   err.status = 502
   throw err
 }
+
+// #region agent log
+const _dl = (loc, msg, data, hid) => fetch('http://127.0.0.1:7464/ingest/3c64f30f-cc3c-43c5-a146-0267a694554f',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'b6fd39'},body:JSON.stringify({sessionId:'b6fd39',location:loc,message:msg,data,timestamp:Date.now(),hypothesisId:hid})}).catch(()=>{});
+// #endregion
+
+async function callImageApi(body) {
+  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  // #region agent log
+  _dl('aiService.js:callImageApi', 'HTTP response received', { status: res.status, ok: res.ok, headers: Object.fromEntries(res.headers.entries()) }, 'H3,H4');
+  // #endregion
+
+  if (!res.ok) {
+    const errBody = await res.json().catch(() => ({}))
+    // #region agent log
+    _dl('aiService.js:callImageApi:notOk', 'Non-OK response body', { errBody }, 'H4');
+    // #endregion
+    const genErr = new Error(errBody.error?.message || `OpenRouter returned ${res.status}`)
+    genErr.status = res.status
+    throw genErr
+  }
+
+  const rawText = await res.text()
+  // #region agent log
+  const rawPreview = rawText.trim().slice(0, 300)
+  const rawLen = rawText.length
+  _dl('aiService.js:callImageApi:rawText', 'Raw response info', { rawLen, rawPreview, startsWithBrace: rawText.trim().startsWith('{') }, 'H3');
+  // #endregion
+
+  const data = JSON.parse(rawText.trim())
+  const choice = data.choices?.[0]
+  const message = choice?.message
+  const finishReason = choice?.finish_reason
+  const choiceError = choice?.error
+
+  // #region agent log
+  _dl('aiService.js:callImageApi:parsed', 'Parsed message structure', {
+    finishReason,
+    choiceErrorCode: choiceError?.code,
+    choiceErrorMsg: choiceError?.message?.slice?.(0, 200),
+    msgKeys: message ? Object.keys(message) : null,
+    hasImages: !!message?.images,
+    imagesLength: message?.images?.length,
+    contentType: typeof message?.content,
+    contentIsNull: message?.content === null,
+    contentIsArray: Array.isArray(message?.content),
+    contentArrayLen: Array.isArray(message?.content) ? message.content.length : null,
+    contentArrayTypes: Array.isArray(message?.content) ? message.content.map(c => c.type) : null,
+    refusal: message?.refusal,
+    reasoningPreview: message?.reasoning?.slice?.(0, 200),
+  }, 'H1,H2');
+  // #endregion
+
+  if (choiceError) {
+    throw new Error(`Upstream error ${choiceError.code}: ${choiceError.message || 'unknown'}`)
+  }
+
+  if (finishReason === 'length') {
+    throw new Error('Model ran out of tokens before generating image')
+  }
+
+  if (message?.images?.length > 0) {
+    // #region agent log
+    _dl('aiService.js:callImageApi:imageFound', 'Image extracted', { imgKeys: Object.keys(message.images[0]), urlPrefix: message.images[0]?.image_url?.url?.slice(0, 40) }, 'H1');
+    // #endregion
+    return message.images[0].image_url.url
+  }
+
+  if (Array.isArray(message?.content)) {
+    const imagePart = message.content.find((c) => c.type === 'image_url')
+    if (imagePart?.image_url?.url) return imagePart.image_url.url
+  }
+
+  return null
+}
+
+export async function generateMemeImage(imageBuffer, mimeType, { templateId, topText, bottomText }) {
+  const template = TEMPLATES.find((t) => t.id === templateId)
+  const templateName = template?.name || templateId
+
+  const base64 = imageBuffer.toString('base64')
+  const userImageUrl = `data:${mimeType};base64,${base64}`
+
+  // #region agent log
+  _dl('aiService.js:generateMemeImage:entry', 'Function called', { templateId, templateName, mimeType, base64Length: base64.length }, 'H5');
+  // #endregion
+
+  const prompt = `Generate an image: a funny, lighthearted meme scene inspired by the popular "${templateName}" internet meme format.
+
+The captions "${topText}" / "${bottomText}" describe the comedic scenario — use them to understand the scene, but do NOT write any text on the image.
+
+Take the person from the attached photo and place them into the meme scene in a playful, cartoonish, family-friendly way. Match their face, expression, and clothing.
+
+Rules:
+- Output ONLY the generated image
+- Absolutely NO text, captions, words, or watermarks on the image
+- Keep it humorous and safe — no violence, harm, or offensive content
+- Square 1:1 aspect ratio
+- Make it look like a real meme photo, not AI art`
+
+  const body = {
+    model: 'openai/gpt-5-image',
+    max_tokens: 16384,
+    messages: [
+      {
+        role: 'user',
+        content: [
+          { type: 'image_url', image_url: { url: userImageUrl, detail: 'low' } },
+          { type: 'text', text: prompt },
+        ],
+      },
+    ],
+    modalities: ['image', 'text'],
+  }
+
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const imageUrl = await callImageApi(body)
+      if (imageUrl) return { imageUrl }
+      console.warn(`[generateMemeImage] Attempt ${attempt + 1}: no image in response, retrying...`)
+    } catch (err) {
+      if (attempt === 1) throw err
+      console.warn(`[generateMemeImage] Attempt ${attempt + 1} error:`, err.message)
+    }
+  }
+
+  const genErr = new Error('Image generation returned no image after 2 attempts')
+  genErr.status = 502
+  throw genErr
+}

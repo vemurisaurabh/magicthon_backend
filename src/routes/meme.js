@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import multer from 'multer'
-import { analyzeMeme, refineMeme } from '../services/aiService.js'
+import { analyzeMeme, refineMeme, generateMemeImage } from '../services/aiService.js'
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } })
 
@@ -66,6 +66,32 @@ memeRouter.post('/refine', upload.single('image'), async (req, res, next) => {
       feedback
     )
     res.json({ suggestions })
+  } catch (err) {
+    next(err)
+  }
+})
+
+memeRouter.post('/generate-meme-image', upload.single('image'), async (req, res, next) => {
+  try {
+    if (!req.file) {
+      const err = new Error('No image file provided')
+      err.status = 400
+      throw err
+    }
+
+    const { templateId, topText, bottomText } = req.body
+    if (!templateId || !topText) {
+      const err = new Error('templateId and topText are required')
+      err.status = 400
+      throw err
+    }
+
+    const result = await generateMemeImage(
+      req.file.buffer,
+      req.file.mimetype,
+      { templateId, topText, bottomText: bottomText || '' }
+    )
+    res.json(result)
   } catch (err) {
     next(err)
   }

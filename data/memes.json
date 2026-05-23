@@ -1,5 +1,12 @@
 {
   "memes": {
+    "52849591": {
+      "id": "52849591",
+      "image_url": "http://localhost:3001/uploads/8f2f799d-94e0-48e0-b6fa-2d823584400f.png",
+      "template_id": "pov-first-day-office",
+      "texts": {},
+      "created_at": "2026-05-23T12:22:03.685Z"
+    },
     "a4683d4d": {
       "id": "a4683d4d",
       "image_url": "http://localhost:3001/uploads/0b150f05-c31f-42b1-8153-60e9daa12afe.png",
@@ -196,6 +203,20 @@
       "template_id": "batman-slapping-robin",
       "texts": {},
       "created_at": "2026-05-23T11:39:35.251Z"
+    },
+    "a71087b7": {
+      "id": "a71087b7",
+      "image_url": "http://localhost:3001/uploads/de4412ae-8489-4836-8fa7-cb3aab7bef46.png",
+      "template_id": "one-does-not-simply",
+      "texts": {},
+      "created_at": "2026-05-23T11:43:42.843Z"
+    },
+    "c720bd42": {
+      "id": "c720bd42",
+      "image_url": "http://localhost:3001/uploads/5ba5c92d-afd0-4f19-9f34-d3024a90ad17.png",
+      "template_id": "batman-slapping-robin",
+      "texts": {},
+      "created_at": "2026-05-23T13:01:31.040Z"
     }
   },
   "reactions": {
@@ -1321,6 +1342,105 @@
         }
       ],
       "updated_at": "2026-05-23T11:33:19.501Z"
+    },
+    "c7369643": {
+      "id": "c7369643",
+      "template_id": "one-does-not-simply",
+      "layers": [
+        {
+          "id": "eQFzHIFN",
+          "text": "One does not simply",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "RhvoAUkh",
+          "text": "visit a temple in crocs and jeans",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T11:43:37.985Z"
+    },
+    "7fd43807": {
+      "id": "7fd43807",
+      "template_id": "pov-first-day-office",
+      "layers": [
+        {
+          "id": "asOa9G52",
+          "text": "POV: First Day in Office",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "I_6CO9RN",
+          "text": "Already Planning Your Exit Strategy",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T12:22:00.146Z"
+    },
+    "aca138f1": {
+      "id": "aca138f1",
+      "template_id": "batman-slapping-robin",
+      "layers": [
+        {
+          "id": "cw9M3F4s",
+          "text": "\"I'm ready for the meeting!\"",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "OMAquzd6",
+          "text": "When it's a Zoom call, not a wedding.",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T13:01:27.237Z"
     }
   }
 }
