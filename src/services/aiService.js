@@ -42,21 +42,26 @@ PROCESS:
 Templates to use (one suggestion per template):
 ${templateList}
 
-OUTPUT FORMAT — JSON array of ${count} objects, nothing else:
+CRITICAL: You MUST produce EXACTLY ${count} suggestion(s). One for EACH template listed above. No more, no fewer. Use ONLY the template IDs listed above.
+
+OUTPUT FORMAT — JSON array of EXACTLY ${count} objects, nothing else:
 [{"templateId":"...","topText":"...","bottomText":"...","reasoning":"one line on why this slaps"}]
 
 No markdown fences. No explanations outside JSON. Pure comedy payload only.`
 }
 
 function validateSuggestions(data, expectedCount, allowedIds) {
-  if (!Array.isArray(data) || data.length !== expectedCount) return false
-  return data.every(
+  if (!Array.isArray(data) || data.length === 0) return false
+  const valid = data.every(
     (s) =>
       allowedIds.has(s.templateId) &&
       typeof s.topText === 'string' &&
       typeof s.bottomText === 'string' &&
       typeof s.reasoning === 'string'
   )
+  if (!valid) return false
+  if (data.length > expectedCount) return false
+  return true
 }
 
 export async function analyzeMeme(imageBuffer, mimeType, options = {}) {
@@ -92,7 +97,7 @@ export async function analyzeMeme(imageBuffer, mimeType, options = {}) {
     attempts++
     const response = await getClient().chat.completions.create({
       model: 'openai/gpt-4o',
-      max_tokens: 1500,
+      max_tokens: 4000,
       temperature: 1.0,
       messages: [
         { role: 'system', content: systemPrompt },
@@ -102,10 +107,12 @@ export async function analyzeMeme(imageBuffer, mimeType, options = {}) {
 
     const raw = response.choices[0]?.message?.content?.trim()
     try {
-      const parsed = JSON.parse(raw)
+      const cleaned = raw.replace(/^```json\s*/i, '').replace(/```\s*$/i, '')
+      const parsed = JSON.parse(cleaned)
       if (validateSuggestions(parsed, expectedCount, allowedIds)) return parsed
-    } catch {
-      // retry
+      console.warn(`[analyze] Validation failed: got ${parsed.length} items, expected ${expectedCount}. IDs:`, parsed.map(s => s.templateId))
+    } catch (e) {
+      console.warn('[analyze] JSON parse failed:', e.message, 'raw:', raw?.slice(0, 200))
     }
   }
 
@@ -146,7 +153,7 @@ No markdown fences. No explanations outside JSON.`
     attempts++
     const response = await getClient().chat.completions.create({
       model: 'openai/gpt-4o',
-      max_tokens: 1500,
+      max_tokens: 4000,
       temperature: 1.0,
       messages: [
         { role: 'system', content: systemPrompt },
@@ -162,10 +169,12 @@ No markdown fences. No explanations outside JSON.`
 
     const raw = response.choices[0]?.message?.content?.trim()
     try {
-      const parsed = JSON.parse(raw)
+      const cleaned = raw.replace(/^```json\s*/i, '').replace(/```\s*$/i, '')
+      const parsed = JSON.parse(cleaned)
       if (validateSuggestions(parsed, expectedCount, allowedIds)) return parsed
-    } catch {
-      // retry
+      console.warn(`[refine] Validation failed: got ${parsed.length} items, expected ${expectedCount}`)
+    } catch (e) {
+      console.warn('[refine] JSON parse failed:', e.message)
     }
   }
 

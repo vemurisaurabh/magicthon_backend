@@ -133,6 +133,27 @@
       "template_id": "distracted-boyfriend",
       "texts": {},
       "created_at": "2026-05-23T09:25:03.273Z"
+    },
+    "929f6504": {
+      "id": "929f6504",
+      "image_url": "http://localhost:3001/uploads/78ba7cd6-1e73-47a9-ab3b-51844d2846c1.png",
+      "template_id": "one-does-not-simply",
+      "texts": {},
+      "created_at": "2026-05-23T10:13:00.053Z"
+    },
+    "2cf84411": {
+      "id": "2cf84411",
+      "image_url": "http://localhost:3001/uploads/3d9fcac9-881a-4060-a45e-4b4e4890d269.png",
+      "template_id": "batman-slapping-robin",
+      "texts": {},
+      "created_at": "2026-05-23T10:18:09.573Z"
+    },
+    "1f6fd432": {
+      "id": "1f6fd432",
+      "image_url": "http://localhost:3001/uploads/4de8d9a7-3977-4d0f-bd12-13fe767c01d6.png",
+      "template_id": "one-does-not-simply",
+      "texts": {},
+      "created_at": "2026-05-23T10:22:58.082Z"
     }
   },
   "reactions": {
@@ -264,6 +285,152 @@
       {
         "emoji": "👏",
         "created_at": "2026-05-23T09:25:22.624Z"
+      }
+    ],
+    "929f6504": [
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:13:09.101Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:13:09.243Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:13:09.398Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:13:09.558Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:13:09.730Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:13:09.897Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T10:13:17.992Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T10:13:18.164Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T10:13:18.333Z"
+      },
+      {
+        "emoji": "🔥",
+        "created_at": "2026-05-23T10:13:18.518Z"
+      }
+    ],
+    "2cf84411": [
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:22.491Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:22.673Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:22.853Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:22.995Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:23.144Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:23.317Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:23.468Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:23.630Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:18:23.803Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:18:33.702Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:18:33.870Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:18:34.029Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:18:34.265Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:18:34.438Z"
+      }
+    ],
+    "1f6fd432": [
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:23.149Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:23.307Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:23.456Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:23.598Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:23.743Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:23.891Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:24.030Z"
+      },
+      {
+        "emoji": "👏",
+        "created_at": "2026-05-23T10:23:24.187Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:23:46.045Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:23:46.222Z"
+      },
+      {
+        "emoji": "😂",
+        "created_at": "2026-05-23T10:23:46.393Z"
       }
     ]
   },
@@ -569,6 +736,105 @@
         }
       ],
       "updated_at": "2026-05-23T09:41:36.966Z"
+    },
+    "42de4a73": {
+      "id": "42de4a73",
+      "template_id": "batman-slapping-robin",
+      "layers": [
+        {
+          "id": "hpOy9xvG",
+          "text": "I will start my day productively!",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "q3E20ohC",
+          "text": "Reality: Netflix binges and existential dread!",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T10:17:57.341Z"
+    },
+    "9cf09cd5": {
+      "id": "9cf09cd5",
+      "template_id": "batman-slapping-robin",
+      "layers": [
+        {
+          "id": "hpOy9xvG",
+          "text": "I will start my day productively!",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "q3E20ohC",
+          "text": "Reality: Netflix binges and existential dread!",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T10:18:07.568Z"
+    },
+    "039161af": {
+      "id": "039161af",
+      "template_id": "one-does-not-simply",
+      "layers": [
+        {
+          "id": "ysc2Yalz",
+          "text": "One does not simply",
+          "x": 0.05,
+          "y": 0.05,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        },
+        {
+          "id": "vove-x5V",
+          "text": "Get a perfect profile pic on first try",
+          "x": 0.05,
+          "y": 0.75,
+          "fontSize": 48,
+          "fontFamily": "Impact, Anton, sans-serif",
+          "fill": "#F5E642",
+          "stroke": "#000000",
+          "strokeWidth": 2,
+          "shadowEnabled": true,
+          "shadowBlur": 4
+        }
+      ],
+      "updated_at": "2026-05-23T10:22:55.569Z"
     }
   }
 }
