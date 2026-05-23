@@ -18,7 +18,7 @@ export async function shareMeme({ imageBuffer, mimeType, templateId, texts }) {
 
   fs.writeFileSync(filePath, imageBuffer)
 
-  const backendUrl = `http://localhost:${process.env.PORT || 3001}`
+  const backendUrl = process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 3001}`
   const imageUrl = `${backendUrl}/uploads/${filename}`
 
   const id = await saveMeme({ imageUrl, templateId, texts })
